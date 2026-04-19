@@ -10,4 +10,11 @@ function calcular(){
 
     //Mostrar en pantalla el componente lblDisponibleValor
     document.getElementById("spnDisponible").innerText= "USD " + disponible.toFixed(2);
+
+    //Llamar a la funcion calcularCapacidad y guardar 
+    let capacidadPago = calcularCapacidadPago(disponible);
+
+    //Mostrar en pantalla e;l componente lblCapacidadPago
+    document.getElementById("spnCapacidadPago").innerText = "USD " + capacidadPago.toFixed(2);
+
 }
