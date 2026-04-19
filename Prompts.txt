@@ -1,0 +1,56 @@
+PROMPTS UTILIZADOS PARA EL DISEÑO DEL SIMULADOR
+
+1. Actúa como un diseñador gráfico experto, necesito que hagas mi página responsive que se vea perfecta en celular y tablet.
+   Reglas importantes:
+
+* Solo HTML y CSS
+* No usar librerías externas como Bootstrap o Tailwind
+* No modificar, eliminar ni cambiar los IDs de los componentes
+* Mantener la funcionalidad del proyecto
+* Asegurarte de que los espacios, tamaños de letra y distribución se adapten correctamente a pantallas pequeñas
+
+2. Actúa como un diseñador gráfico y desarrollador front-end experto.
+   Mejora el diseño de mi página web para que sea completamente responsive, asegurando que se vea perfecta en celulares y tablets.
+   Requisitos:
+
+* Diseño moderno y profesional
+* Buena jerarquía visual
+* Espaciado adecuado (márgenes y padding)
+* Tipografía clara y legible
+* Experiencia de usuario cómoda
+
+3. Actúa como un diseñador UX/UI experto especializado en plataformas financieras.
+   Rediseña la interfaz visual con un enfoque minimalista, moderno y elegante.
+   Inspírate en páginas de bancos digitales.
+   Requisitos:
+
+* Uso de tarjetas (cards)
+* Colores sobrios con acento en amarillo
+* Tipografía moderna (Inter o Poppins)
+* Microinteracciones en botones
+* Diseño limpio con buen uso de espacios
+
+4. Mejora la parte visual usando IA, dale un aspecto empresarial.
+   Elige una entidad financiera como referencia y utiliza colores corporativos.
+   Haz que el diseño sea moderno, limpio y profesional, similar a una app bancaria.
+
+5. Ajusta el diseño para que mantenga la estructura original del proyecto, pero mejora únicamente la parte visual.
+   No cambies la lógica ni los IDs del HTML.
+
+6. Integra un logo en la interfaz del sistema manteniendo la estructura existente.
+   Ubícalo en el header y asegúrate de que se vea bien alineado y proporcional.
+
+7. Aplica una paleta de colores basada en el logo proporcionado.
+   Ajusta botones, estados, inputs y elementos visuales para que tengan coherencia con la identidad visual.
+
+8. Mejora los botones agregando microinteracciones como efectos hover (scale, translate y sombras suaves).
+
+9. Agrega una imagen de fondo al proyecto manteniendo la legibilidad del contenido.
+   Utiliza un overlay oscuro o gradiente para evitar que el texto pierda visibilidad.
+
+10. Ajusta el diseño para que mantenga una apariencia profesional sin sobrecargar la interfaz.
+    Prioriza claridad, orden visual y experiencia del usuario.
+
+11. Optimiza el diseño final para que sea responsive, asegurando que se vea correctamente en dispositivos móviles sin romper la estructura.
+
+12. Realiza mejoras finales de UI manteniendo el equilibrio entre estética y funcionalidad, simulando una plataforma financiera real.

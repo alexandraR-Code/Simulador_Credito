@@ -1,70 +1,149 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
+/* RESET */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-.container {
-    width: 400px;
-    margin: 40px auto;
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #f4f6f8, #e9edf3);
+    display: flex;
+    justify-content: center;
     padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.logo {
+    width: 100px;
+    margin-bottom: 10px;
 }
 
-h1 {
+/* CONTENEDOR */
+.container {
+    width: 100%;
+    max-width: 420px;
+}
+
+/* HEADER */
+.header {
     text-align: center;
     margin-bottom: 20px;
 }
 
+.header h1 {
+    font-size: 1.6rem;
+    color: #000;
+}
+
+.header p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* CARDS */
+.card {
+    background: white;
+    border-radius: 14px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #eee;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+/* TITULOS */
 h2 {
-    margin-top: 20px;
-    font-size: 18px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: #333;
 }
 
+/* LABEL */
 label {
-    display: block;
+    font-size: 0.85rem;
+    color: #555;
     margin-top: 10px;
-    font-weight: bold;
+    display: block;
 }
 
+/* INPUT */
 input {
     width: 100%;
-    padding: 8px;
+    padding: 10px;
     margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+
+    border-radius: 8px;
+    border: 1px solid #ddd;
+
+    transition: 0.2s;
 }
 
-p {
-    margin-top: 10px;
+input:focus {
+    border-color: #facc15;
+    outline: none;
+}
+
+/* RESULTADOS */
+.result-box {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+.result-box p {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
 }
 
 span {
-    font-weight: bold;
-    color: #2c3e50;
+    font-weight: 600;
+    color: #000;
 }
 
+/* ESTADO */
+.estado span {
+    color: #facc15;
+}
+
+/* BOTONES */
 .buttons {
-    margin-top: 20px;
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
 }
 
 button {
-    width: 48%;
-    padding: 10px;
+    flex: 1;
+    padding: 12px;
+
     border: none;
-    border-radius: 5px;
-    background-color: #3498db;
-    color: white;
-    font-weight: bold;
+    border-radius: 10px;
+
+    background: #facc15;
+    color: #000;
+
+    font-weight: 600;
     cursor: pointer;
+
+    transition: all 0.2s ease;
 }
 
+/* MICROINTERACCIÓN */
 button:hover {
-    background-color: #2980b9;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* BOTON SECUNDARIO */
+button:last-child {
+    background: #e5e7eb;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+    .container {
+        max-width: 100%;
+    }
+
+    .card {
+        padding: 15px;
+    }
 }
