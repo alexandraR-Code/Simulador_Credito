@@ -41,4 +41,17 @@ function calcular(){
     //Mostrar en pantalla lblCuotaMensual
 
     document.getElementById("spnCuotaMensual").innerText =  "USD " + cuota.toFixed(2);
+
+    //Invocar a analizarcredito y guardar el resultado en una variable
+    let aprobado = aprobarCredito(capacidadPago, cuota);
+
+    //Mostar en pantalla el estado del cfedito 
+    if (aprobado){
+        document.getElementById("spnEstadoCredito").innerText = "CREDITO APROBADO";
+
+    }else{
+        document.getElementById("spnEstadoCredito").innerText = "CREDITO RECHAZADO"
+    }
+
+
 }
