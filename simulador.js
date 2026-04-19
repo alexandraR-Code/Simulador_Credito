@@ -23,10 +23,16 @@ function calcular(){
     let tasa =parseInt(document.getElementById("txtTasaInteres").value);
 
     //Llamar a la funcion calcularInteresSimple
-    let valorInteres = calcularInteresSimple(monto,tasa, plazoAnios);
+    let valorInteres = calcularInteresSimple(monto, tasa, plazoAnios);
 
     //mostrar en pantalla en componente lblInteresValor
     document.getElementById("spnInteresPagar").innerText = valorInteres.toFixed(2);
 
+    //Invocar a calcularTotalPagar
+    let totalPagar = calcularTotalPagar(monto, valorInteres);
+
+    //Mostrar en  pantalla en el componente lblTotalValor
+    
+    document.getElementById("spnTotalPrestamo").innerText = totalPagar.toFixed(2);
 
 }
