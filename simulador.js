@@ -26,13 +26,19 @@ function calcular(){
     let valorInteres = calcularInteresSimple(monto, tasa, plazoAnios);
 
     //mostrar en pantalla en componente lblInteresValor
-    document.getElementById("spnInteresPagar").innerText = valorInteres.toFixed(2);
+    document.getElementById("spnInteresPagar").innerText =  "USD " + valorInteres.toFixed(2);
 
     //Invocar a calcularTotalPagar
     let totalPagar = calcularTotalPagar(monto, valorInteres);
 
     //Mostrar en  pantalla en el componente lblTotalValor
     
-    document.getElementById("spnTotalPrestamo").innerText = totalPagar.toFixed(2);
+    document.getElementById("spnTotalPrestamo").innerText =  "USD " + totalPagar.toFixed(2);
 
+    //Invoca a calcularaMensual
+    let cuota = calcularCuotaMensual(totalPagar, plazoAnios);
+
+    //Mostrar en pantalla lblCuotaMensual
+
+    document.getElementById("spnCuotaMensual").innerText =  "USD " + cuota.toFixed(2);
 }
