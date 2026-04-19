@@ -17,4 +17,16 @@ function calcular(){
     //Mostrar en pantalla e;l componente lblCapacidadPago
     document.getElementById("spnCapacidadPago").innerText = "USD " + capacidadPago.toFixed(2);
 
+    //leer los valores monto, plazoAnios, tasa como enteros
+    let monto = parseInt(document.getElementById("txtMonto").value);
+    let plazoAnios = parseInt(document.getElementById("txtPlazo").value);
+    let tasa =parseInt(document.getElementById("txtTasaInteres").value);
+
+    //Llamar a la funcion calcularInteresSimple
+    let valorInteres = calcularInteresSimple(monto,tasa, plazoAnios);
+
+    //mostrar en pantalla en componente lblInteresValor
+    document.getElementById("spnInteresPagar").innerText = valorInteres.toFixed(2);
+
+
 }
