@@ -1,16 +1,14 @@
 //AQUI EL JAVASCRT PARA MANIPULAR EL HTML
 function calcular(){
-
-     let esValido = true;
-
-    esValido && validarCampo('txtIngresos','errorIngresos');
-    esValido && validarCampo('txtEgresos','errorEgresos');
-    esValido && validarCampo('txtMonto','errorMonto');
-    esValido && validarCampo('txtPlazo','errorPlazo');
-    esValido && validarCampo('txtTasaInteres','errorTasa');
-
+    let esValido = true;
+    esValido = validarCampo('txtIngresos','errorIngresos') && esValido;
+    esValido = validarCampo('txtEgresos','errorEgresos') && esValido;
+    esValido = validarCampo('txtMonto','errorMonto') && esValido;
+    esValido = validarCampo('txtPlazo','errorPlazo') && esValido;
+    esValido = validarCampo('txtTasaInteres','errorTasa') && esValido;
     // Si hay errores, NO continuar
     if (!esValido) {
+
         return;
     }
     //------------------------------------------------------

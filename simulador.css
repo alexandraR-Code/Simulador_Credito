@@ -151,6 +151,10 @@ button:last-child {
     color: red;
     font-style: italic;
     font-size: 0.8rem;
-    display: block;
+    display: none;
     margin-top: 4px;
+}
+
+.error.activo {
+    display: block;
 }

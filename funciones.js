@@ -1,4 +1,5 @@
 //AQUI TODA LA LOGICA DE LAS FUNCIONES DEL NEGOCIO
+
 function calcularDisponible(ingresos, egresos){
     let disponible;
     disponible = ingresos -egresos;
@@ -46,29 +47,54 @@ function aprobarCredito(capacidadPago, cuotaMensual){
     }
 
 }
-function validarCampo(idInput, idError) {
+function validarCampo(idInput, idError, mostrarError = true) {
     let valor = document.getElementById(idInput).value;
     let error = document.getElementById(idError);
 
-    error.textContent = "";
+    if (mostrarError) {
+        error.textContent = "";
+        error.classList.remove("activo");
+    }
 
     // Campo vacío
     if (valor.trim() === "") {
-        error.textContent = "Campo obligatorio";
+        if (mostrarError) {
+            error.textContent = "Campo obligatorio";
+            error.classList.add("activo");
+        }
         return false;
     }
 
     // Solo números
     if (!/^\d+$/.test(valor)) {
-        error.textContent = "Solo se permiten números";
+        if (mostrarError) {
+            error.textContent = "Solo se permiten números";
+            error.classList.add("activo");
+        }
         return false;
     }
 
     // Máximo 5 dígitos
     if (valor.length > 5) {
-        error.textContent = "Máximo 5 dígitos";
+        if (mostrarError) {
+            error.textContent = "Máximo 5 dígitos";
+            error.classList.add("activo");
+        }
         return false;
     }
 
     return true;
+}
+function validarFormulario() {
+    let v1 = validarCampo('txtIngresos','errorIngresos', false);
+    let v2 = validarCampo('txtEgresos','errorEgresos', false);
+    let v3 = validarCampo('txtMonto','errorMonto', false);
+    let v4 = validarCampo('txtPlazo','errorPlazo', false);
+    let v5 = validarCampo('txtTasaInteres','errorTasa', false);
+
+    let esValido = v1 && v2 && v3 && v4 && v5;
+
+    document.getElementById("btnCalcularCredito").disabled = !esValido;
+
+    return esValido;
 }
