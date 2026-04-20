@@ -147,3 +147,10 @@ button:last-child {
         padding: 15px;
     }
 }
+.error {
+    color: red;
+    font-style: italic;
+    font-size: 0.8rem;
+    display: block;
+    margin-top: 4px;
+}

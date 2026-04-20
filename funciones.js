@@ -46,3 +46,29 @@ function aprobarCredito(capacidadPago, cuotaMensual){
     }
 
 }
+function validarCampo(idInput, idError) {
+    let valor = document.getElementById(idInput).value;
+    let error = document.getElementById(idError);
+
+    error.textContent = "";
+
+    // Campo vacío
+    if (valor.trim() === "") {
+        error.textContent = "Campo obligatorio";
+        return false;
+    }
+
+    // Solo números
+    if (!/^\d+$/.test(valor)) {
+        error.textContent = "Solo se permiten números";
+        return false;
+    }
+
+    // Máximo 5 dígitos
+    if (valor.length > 5) {
+        error.textContent = "Máximo 5 dígitos";
+        return false;
+    }
+
+    return true;
+}

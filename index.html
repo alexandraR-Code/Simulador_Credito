@@ -31,10 +31,12 @@
             <h2>Datos financieros</h2>
 
             <label for="txtIngresos">Ingresos</label>
-            <input type="text" id="txtIngresos" placeholder="Ej: 1000">
+            <input type="text" id="txtIngresos" onblur="validarCampo('txtIngresos','errorIngresos')">
+            <span id="errorIngresos" class="error"></span>
 
             <label for="txtEgresos">Egresos</label>
-            <input type="text" id="txtEgresos" placeholder="Ej: 500">
+            <input type="text" id="txtEgresos" onblur="validarCampo('txtEgresos','errorEgresos')">
+            <span id="errorEgresos" class="error"></span>
 
             <div class="result-box">
                 <p>Disponible <span id="spnDisponible"></span></p>
@@ -47,13 +49,18 @@
             <h2>Solicitud de crédito</h2>
 
             <label for="txtMonto">Monto</label>
-            <input type="text" id="txtMonto" placeholder="Ej: 2000">
+            <input type="text" id="txtMonto" onblur="validarCampo('txtMonto','errorMonto')">
+            <span id="errorMonto" class="error"></span>
 
             <label for="txtPlazo">Plazo (años)</label>
-            <input type="text" id="txtPlazo" placeholder="Ej: 2">
+            <input type="text" id="txtPlazo" onblur="validarCampo('txtPlazo','errorPlazo')">
+            <span id="errorPlazo" class="error"></span>
 
             <label for="txtTasaInteres">Tasa (%)</label>
-            <input type="text" id="txtTasaInteres" placeholder="Ej: 15">
+            <input type="text" id="txtTasaInteres" onblur="validarCampo('txtTasaInteres','errorTasa')">
+            <span id="errorTasa" class="error"></span>
+
+
 
             <div class="result-box">
                 <p>Interés <span id="spnInteresPagar"></span></p>
