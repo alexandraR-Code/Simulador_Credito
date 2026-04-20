@@ -1,6 +1,19 @@
 //AQUI EL JAVASCRT PARA MANIPULAR EL HTML
 function calcular(){
 
+     let esValido = true;
+
+    esValido && validarCampo('txtIngresos','errorIngresos');
+    esValido && validarCampo('txtEgresos','errorEgresos');
+    esValido && validarCampo('txtMonto','errorMonto');
+    esValido && validarCampo('txtPlazo','errorPlazo');
+    esValido && validarCampo('txtTasaInteres','errorTasa');
+
+    // Si hay errores, NO continuar
+    if (!esValido) {
+        return;
+    }
+    //------------------------------------------------------
     // Leer ingreso y sgreso (float)
     let ingresos = parseFloat(document.getElementById("txtIngresos").value);
     let egresos = parseFloat(document.getElementById("txtEgresos").value);
