@@ -2,7 +2,9 @@
 function calcular(){
     let esValido = true;
     esValido = validarCampo('txtIngresos','errorIngresos') && esValido;
-    esValido = validarCampo('txtEgresos','errorEgresos') && esValido;
+    esValido = validarCampo('txtArriendo','errorArriendo') && esValido;
+    esValido = validarCampo('txtAlimentacion','errorAlimentacion') && esValido;
+    esValido = validarCampo('txtVarios','errorVarios') && esValido;
     esValido = validarCampo('txtMonto','errorMonto') && esValido;
     esValido = validarCampo('txtPlazo','errorPlazo') && esValido;
     esValido = validarCampo('txtTasaInteres','errorTasa') && esValido;
@@ -14,10 +16,15 @@ function calcular(){
     //------------------------------------------------------
     // Leer ingreso y sgreso (float)
     let ingresos = parseFloat(document.getElementById("txtIngresos").value);
-    let egresos = parseFloat(document.getElementById("txtEgresos").value);
-
+    let arriendo = parseFloat(document.getElementById("txtArriendo").value);
+    let alimentacion = parseFloat(document.getElementById("txtAlimentacion").value);
+    let varios = parseFloat(document.getElementById("txtVarios").value);
+    
+    let gastos = arriendo +alimentacion +varios;
+    document.getElementById("spnTotalGastos").innerText = "USD " + total.toFixed(2);
+    
     //Llamar a la funcion calcularDisponible
-    let disponible = calcularDisponible(ingresos, egresos);
+    let disponible = calcularDisponible(ingresos, arriendo, alimentacion, varios);
 
     //Mostrar en pantalla el componente lblDisponibleValor
     document.getElementById("spnDisponible").innerText= "USD " + disponible.toFixed(2);

@@ -34,9 +34,19 @@
             <input type="text" id="txtIngresos" onblur="validarCampo('txtIngresos','errorIngresos')">
             <span id="errorIngresos" class="error"></span>
 
-            <label for="txtEgresos">Egresos</label>
-            <input type="text" id="txtEgresos" onblur="validarCampo('txtEgresos','errorEgresos')">
-            <span id="errorEgresos" class="error"></span>
+            <label for="txtArriendo">Arriendo</label>
+            <input type="text" id="txtArriendos" onblur="validarCampo('txtArriendo','errorArriendo')">
+            <span id="errorArriendo" class="error"></span>
+
+            <label for="txtAlimentacion">Alimentación</label>
+            <input type="text" id="txtAlimentacion" onblur="validarCampo('txtAlimentacion','errorAlimentacion')">
+            <span id="errorAlimentacion" class="error"></span>
+            
+            <label for="txtVarios">Varios</label>
+            <input type="text" id="txtVarios" onblur="validarCampo('txtVarios','errorVarios')">
+            <span id="errorVarios" class="error"></span>
+
+            <p>Total gastos: <span id="spnTotalGastos"></span></p>
 
             <div class="result-box">
                 <p>Disponible <span id="spnDisponible"></span></p>

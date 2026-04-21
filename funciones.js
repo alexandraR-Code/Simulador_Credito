@@ -1,8 +1,9 @@
 //AQUI TODA LA LOGICA DE LAS FUNCIONES DEL NEGOCIO
 
-function calcularDisponible(ingresos, egresos){
+function calcularDisponible(ingresos, arriendo, alimentacion, varios){
     let disponible;
-    disponible = ingresos -egresos;
+    let gastos = arriendo + alimentacion + varios
+    disponible = ingresos - gastos;
 
     if(disponible < 0){
         return 0;
